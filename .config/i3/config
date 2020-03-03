@@ -192,3 +192,8 @@ for_window [class="^.*"] border pixel 0
 
 gaps inner 8 
 gaps outer 8
+
+
+#brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
