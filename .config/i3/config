@@ -176,8 +176,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always bwall -bonsai
-exec_always wal -i /home/rene/pkg/battery-wallpaper/images/bonsai/battery_9.png
-exec_always ~/.config/polybar/launch.sh
+exec_always wal -i /home/rene/pkg/battery-wallpaper/images/bonsai/battery_9.png &
+exec_always ~/.config/polybar/launch.sh &
 
 
 for_window [window_role="pop-up"] floating enable
@@ -185,7 +185,7 @@ for_window [window_role="task_dialog"] floating enable
 
 
 for_window [instance="origin.exe"] floating enable
-
+for_window [instance="Makie"] floating enable
 
 #remove border and titles
 for_window [class="^.*"] border pixel 0
@@ -197,3 +197,7 @@ gaps outer 8
 #brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+
+#layout
+#exec_always ~/load_layout.sh &
